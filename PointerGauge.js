@@ -115,11 +115,10 @@
 			max: undefined != max ? max : 100,
 			minorTicks: 5
 		}
-		
+
 		var range = config.max - config.min;
 		config.yellowZones = [{ from: config.min + range*0.75, to: config.min + range*0.9 }];
 		config.redZones = [{ from: config.min + range*0.9, to: config.max }];
-		
 		var gauge= Gauge("fillgauge", config);
 		gauge.redraw(value);
 		
