@@ -79,7 +79,7 @@
 
         // Set our title to an appropriate value
         $('#user_prompts').remove();
-        $('#show_choose_sheet_button').remove();
+        $('#modal-header').remove();
 
         // Call to get the summaryData for our sheet
         worksheet.getSummaryDataAsync().then(function(SummaryData) {
