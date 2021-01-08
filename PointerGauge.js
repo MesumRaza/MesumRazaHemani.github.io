@@ -13,6 +13,8 @@
             const worksheetName = tableau.extensions.settings.get('selWorksheet');
             if (worksheetName) {
                 loadSummaryData(worksheetName);
+				document.write("I was here..");
+		
             } else {
                 $('#user_prompts_title').text("Configure Extension...");
             }
@@ -89,6 +91,8 @@
             // Populate the data table with the rows and columns we just pulled out
             //populateDataTable(data, columns);
             populatePointerGauge(SummaryData);
+			document.write("I was here..");
+		
         });
     }
 
