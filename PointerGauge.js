@@ -103,7 +103,7 @@
 		var config = 
 		{
 			size: 120,
-			label: label,
+			label: value,
 			min: undefined != min ? min : 0,
 			max: undefined != max ? max : 100,
 			minorTicks: 5
