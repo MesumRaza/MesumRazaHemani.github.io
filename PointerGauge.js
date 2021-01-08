@@ -116,7 +116,7 @@
 			{
 				size: 120,
 				label: "Tableau",
-				key: value,
+				value: value,
 				min: undefined != min ? min : 0,
 				max: undefined != max ? max : 100,
 				minorTicks: 5
