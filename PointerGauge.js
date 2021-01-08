@@ -105,7 +105,7 @@
 		//document.write("I was here..");
 		
         var value = SummaryData.data[0][0].value //get 1st measure value from connected sheet (POINTER VALUE)
-	    
+	    document.write(value);
 		var config = 
 		{
 			size: "100%",
@@ -120,7 +120,7 @@
 		config.redZones = [{ from: config.min + range*0.9, to: config.max }];
 		//var gauge= Gauge("fillgauge", config);
 	//	gauge.redraw(value);
-		document.write("I was here");
+		
 		
 	}}
 
