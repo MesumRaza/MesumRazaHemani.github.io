@@ -103,9 +103,9 @@
 
         if (SummaryData.data.length > 0) {
 		//document.write("I was here..");
-		
+		document.write(value);
         var value = SummaryData.data[0][0].value //get 1st measure value from connected sheet (POINTER VALUE)
-	    document.write(value);
+	    
 		var config = 
 		{
 			size: "100%",
