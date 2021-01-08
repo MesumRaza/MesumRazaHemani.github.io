@@ -12,7 +12,7 @@
             fetchFilters();
             const worksheetName = tableau.extensions.settings.get('selWorksheet');
             if (worksheetName) {
-                loadSummaryData(worksheetName);
+                //loadSummaryData(worksheetName);
             } else {
                 $('#user_prompts_title').text("Configure Extension...");
             }
@@ -88,7 +88,7 @@
 
             // Populate the data table with the rows and columns we just pulled out
             //populateDataTable(data, columns);
-            //populatePointerGauge(SummaryData);
+            populatePointerGauge(SummaryData);
         });
     }
 
