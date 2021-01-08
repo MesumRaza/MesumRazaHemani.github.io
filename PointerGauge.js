@@ -98,50 +98,23 @@
 
         if (SummaryData.data.length > 0) {
 
-            var value = SummaryData.data[0][0].value //get 1st measure value from connected sheet (POINTER VALUE)
-	    var config = 
-				{
-					size: 120,
-					label: label,
-					value: Value,
-					min: undefined != min ? min : 0,
-					max: undefined != max ? max : 100,
-					minorTicks: 5
-				}
-				
-				var range = config.max - config.min;
-				config.yellowZones = [{ from: config.min + range*0.75, to: config.min + range*0.9 }];
-				config.redZones = [{ from: config.min + range*0.9, to: config.max }];
-	    var gauge = Gauge("fillgauge",config);
-
-
-        } else {
-            // If we didn't get any rows back, there must be no marks selected
-            $('#no_data_message').css('display', 'inline');
-        }
-    }
-	
-	var gauges = [];
-			
-		function createGauge(placeholder,value)
+            	var value = SummaryData.data[0][0].value //get 1st measure value from connected sheet (POINTER VALUE)
+	    
+		var config = 
 		{
-			var config = 
-			{
-				size: 120,
-				label: "Tableau",
-				key: value,
-				min: undefined != min ? min : 0,
-				max: undefined != max ? max : 100,
-				minorTicks: 5
-			}
-			
-			var range = config.max - config.min;
-			config.yellowZones = [{ from: config.min + range*0.75, to: config.min + range*0.9 }];
-			config.redZones = [{ from: config.min + range*0.9, to: config.max }];
-			
-			gauges[name] = new Gauge(placeholder, config);
-			gauges[name].render();
+			size: 120,
+			label: label,
+			min: undefined != min ? min : 0,
+			max: undefined != max ? max : 100,
+			minorTicks: 5
 		}
+
+		var range = config.max - config.min;
+		config.yellowZones = [{ from: config.min + range*0.75, to: config.min + range*0.9 }];
+		config.redZones = [{ from: config.min + range*0.9, to: config.max }];
+
+		var gauge= Gauge("fillgauge", config);
+			
 
     function NewValue() {
         if (Math.random() > .5) {
