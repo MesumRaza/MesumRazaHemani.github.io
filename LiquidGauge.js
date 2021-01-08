@@ -51,9 +51,8 @@
 
                 // Close the dialog and show the data table for this worksheet
                 tableau.extensions.settings.saveAsync().then((newSavedSettings) => {
-                    //$('#choose_sheet_dialog').modal('toggle');
+                    
                     loadSummaryData(worksheetName);
-                    $('#show_choose_sheet_button').remove();
                 });
             });
 
@@ -90,6 +89,7 @@
             // Populate the data table with the rows and columns we just pulled out
             //populateDataTable(data, columns);
             populateLiquidGauge(SummaryData);
+            $('#choose_sheet_dialog').remove;
         });
     }
 
