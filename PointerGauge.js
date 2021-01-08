@@ -119,6 +119,7 @@
 		var range = config.max - config.min;
 		config.yellowZones = [{ from: config.min + range*0.75, to: config.min + range*0.9 }];
 		config.redZones = [{ from: config.min + range*0.9, to: config.max }];
+		document.write(value);
 		var gauge= Gauge("fillgauge", config);
 		gauge.redraw(value);
 		
