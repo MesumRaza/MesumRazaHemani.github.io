@@ -99,7 +99,20 @@
         if (SummaryData.data.length > 0) {
 
             var value = SummaryData.data[0][0].value //get 1st measure value from connected sheet (POINTER VALUE)
-            var gauge = createGauge("fillgauge",value * 100);
+	    var config = 
+				{
+					size: 120,
+					label: label,
+					value: Value,
+					min: undefined != min ? min : 0,
+					max: undefined != max ? max : 100,
+					minorTicks: 5
+				}
+				
+				var range = config.max - config.min;
+				config.yellowZones = [{ from: config.min + range*0.75, to: config.min + range*0.9 }];
+				config.redZones = [{ from: config.min + range*0.9, to: config.max }];
+	    var gauge = Gauge("fillgauge",config);
 
 
         } else {
