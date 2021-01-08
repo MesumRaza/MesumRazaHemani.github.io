@@ -1,0 +1,14 @@
+h4, h5 {
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div.DTS div.dataTables_scrollBody {
+  background: white;
+}
+
+.sheet_name {
+  font-weight: bold;
+}
+
+.liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
