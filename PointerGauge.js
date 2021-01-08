@@ -101,7 +101,7 @@
     function populatePointerGauge(value) {
         // Do some UI setup here to change the visible section and reinitialize the table
         //$('#fillgauge').empty();
-
+		this.value=value
         if (value) {
 		//document.write("I was here..");
 		document.write(value);
