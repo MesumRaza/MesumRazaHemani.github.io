@@ -104,7 +104,7 @@
             config.circleColor = "#c71414";
             config.textColor = "#c71414";
             config.waveTextColor = "#00ffff";
-            config.waveColor = "#6388b4";
+            config.waveColor = "#c71414";
             config.textVertPosition = 0.5;
             config.waveAnimateTime = 1000;
             config.waveHeight = 0.05;
