@@ -13,7 +13,7 @@
             const worksheetName = tableau.extensions.settings.get('selWorksheet');
             if (worksheetName) {
                 loadSummaryData(worksheetName);
-				document.write("I was here..");
+				//document.write("I was here..");
 		
             } else {
                 $('#user_prompts_title').text("Configure Extension...");
@@ -53,8 +53,8 @@
 
                 // Close the dialog and show the data table for this worksheet
                 tableau.extensions.settings.saveAsync().then((newSavedSettings) => {
-                    $('#choose_sheet_dialog').modal('toggle');
                     loadSummaryData(worksheetName);
+					$('#choose_sheet_dialog').modal('toggle');
                 });
             });
 
@@ -81,7 +81,8 @@
 
         // Set our title to an appropriate value
         $('#user_prompts').remove();
-        //$('#show_choose_sheet_button').remove();
+        $('#show_choose_sheet_button').remove();
+		$('#choose_sheet_dialog').remove();
 
         // Call to get the summaryData for our sheet
         worksheet.getSummaryDataAsync().then(function(SummaryData) {
@@ -90,9 +91,9 @@
 
             // Populate the data table with the rows and columns we just pulled out
             //populateDataTable(data, columns);
-            populatePointerGauge(SummaryData);
-			document.write("I was here..");
-		
+            document.write("I was here..");
+			populatePointerGauge(SummaryData);
+			
         });
     }
 
