@@ -92,19 +92,20 @@
             // Populate the data table with the rows and columns we just pulled out
             //populateDataTable(data, columns);
             //document.write("I was here..");
-			populatePointerGauge(SummaryData);
+			var value = SummaryData.data[0][0].value //get 1st measure value from connected sheet (POINTER VALUE)
+			populatePointerGauge(value);
 			
         });
     }
 
-    function populatePointerGauge(SummaryData) {
+    function populatePointerGauge(value) {
         // Do some UI setup here to change the visible section and reinitialize the table
         //$('#fillgauge').empty();
 
-        if (SummaryData.data.length > 0) {
+        if (value) {
 		//document.write("I was here..");
 		document.write(value);
-        var value = SummaryData.data[0][0].value //get 1st measure value from connected sheet (POINTER VALUE)
+        
 	    
 		var config = 
 		{
@@ -118,8 +119,8 @@
 		var range = config.max - config.min;
 		config.yellowZones = [{ from: config.min + range*0.75, to: config.min + range*0.9 }];
 		config.redZones = [{ from: config.min + range*0.9, to: config.max }];
-		//var gauge= Gauge("fillgauge", config);
-	//	gauge.redraw(value);
+		var gauge= Gauge("fillgauge", config);
+		gauge.redraw(value);
 		
 		
 	}}
