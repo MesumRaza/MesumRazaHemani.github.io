@@ -88,7 +88,7 @@
 
             // Populate the data table with the rows and columns we just pulled out
             //populateDataTable(data, columns);
-            populatePointerGauge(SummaryData);
+            //populatePointerGauge(SummaryData);
         });
     }
 
