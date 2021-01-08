@@ -99,7 +99,7 @@
 
     function populatePointerGauge(SummaryData) {
         // Do some UI setup here to change the visible section and reinitialize the table
-        $('#fillgauge').empty();
+        //$('#fillgauge').empty();
 
         if (SummaryData.data.length > 0) {
 		//document.write("I was here..");
