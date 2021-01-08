@@ -103,9 +103,8 @@
         //$('#fillgauge').empty();
 		this.value=value
         if (value) {
-		document.write("I was here..");
-		//document.write(value);
-        
+		//document.write("I was here..");
+		
 	    
 		var config = 
 		{
@@ -119,8 +118,9 @@
 		var range = config.max - config.min;
 		config.yellowZones = [{ from: config.min + range*0.75, to: config.min + range*0.9 }];
 		config.redZones = [{ from: config.min + range*0.9, to: config.max }];
-		var gauge= Gauge("fillgauge", config);
-		gauge.redraw(value);
+		document.write(value);
+        //var gauge= Gauge("fillgauge", config);
+		//gauge.redraw(value);
 		
 		
 	}}
