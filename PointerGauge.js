@@ -97,8 +97,9 @@
         $('#fillgauge').empty();
 
         if (SummaryData.data.length > 0) {
-
-            	var value = SummaryData.data[0][0].value //get 1st measure value from connected sheet (POINTER VALUE)
+		document.write("I was here..");
+		
+        var value = SummaryData.data[0][0].value //get 1st measure value from connected sheet (POINTER VALUE)
 	    
 		var config = 
 		{
@@ -112,7 +113,7 @@
 		var range = config.max - config.min;
 		config.yellowZones = [{ from: config.min + range*0.75, to: config.min + range*0.9 }];
 		config.redZones = [{ from: config.min + range*0.9, to: config.max }];
-		$('#user_prompts_title').text("I was here...");
+		document.write("I was here..");
 		var gauge= Gauge("fillgauge", config);
 	}}
 
