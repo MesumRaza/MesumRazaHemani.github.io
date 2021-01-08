@@ -120,7 +120,7 @@
 		config.redZones = [{ from: config.min + range*0.9, to: config.max }];
 		var gauge= Gauge("fillgauge", config);
 		gauge.redraw(value);
-		//document.write("I was here..");
+		document.write(value);
 		
 	}}
 
