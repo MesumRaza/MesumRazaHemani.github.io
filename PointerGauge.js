@@ -112,7 +112,7 @@
 		var range = config.max - config.min;
 		config.yellowZones = [{ from: config.min + range*0.75, to: config.min + range*0.9 }];
 		config.redZones = [{ from: config.min + range*0.9, to: config.max }];
-
+		$('#user_prompts_title').text("I was here...");
 		var gauge= Gauge("fillgauge", config);
 	}}
 
