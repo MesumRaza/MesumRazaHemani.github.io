@@ -103,8 +103,8 @@
         //$('#fillgauge').empty();
 		this.value=value
         if (value) {
-		//document.write("I was here..");
-		document.write(value);
+		document.write("I was here..");
+		//document.write(value);
         
 	    
 		var config = 
