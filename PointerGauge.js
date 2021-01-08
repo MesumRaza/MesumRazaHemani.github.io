@@ -102,7 +102,7 @@
         $('#fillgauge').empty();
 
         if (SummaryData.data.length > 0) {
-		document.write("I was here..");
+		//document.write("I was here..");
 		
         var value = SummaryData.data[0][0].value //get 1st measure value from connected sheet (POINTER VALUE)
 	    
