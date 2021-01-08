@@ -91,7 +91,7 @@
 
             // Populate the data table with the rows and columns we just pulled out
             //populateDataTable(data, columns);
-            document.write("I was here..");
+            //document.write("I was here..");
 			populatePointerGauge(SummaryData);
 			
         });
