@@ -108,7 +108,7 @@
 	    
 		var config = 
 		{
-			size: 120,
+			size: 300,
 			label: value,
 			min: undefined != min ? min : 0,
 			max: undefined != max ? max : 100,
