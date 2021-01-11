@@ -79,7 +79,7 @@
             this.value=value;
 			var range = max - min;
             var config = {
-                size: 100,
+                size: 20,
                 label: label,
                 min: undefined != min ? min : 0,
                 max: undefined != max ? max : 100,
