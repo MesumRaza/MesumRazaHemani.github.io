@@ -97,37 +97,36 @@
 			
         });
     }
+	
+	function populatePointerGauge(value, label, min = 0, max = 100) {
+            this.value=value;
+			var range = max - min;
+            var config = {
+                size: 500,
+                label: label,
+                min: undefined != min ? min : 0,
+                max: undefined != max ? max : 100,
+                minorTicks: 5,
+                greenZones: {
+                    from: 0,
+                    to: min + range * 0.75
+                },
+                yellowZones: {
+                    from: min + range * 0.75,
+                    to: min + range * 0.9
+                },
+                redZones: {
+                    from: min + range * 0.9,
+                    to: max
+                }
 
-    function populatePointerGauge(value) {
-        // Do some UI setup here to change the visible section and reinitialize the table
-        $('#fillgauge').empty();
-		this.value=value
-        if (value) {
-		//document.write("I was here..");
-		document.write(value);
-	    
-		var config = 
-		{
-			size: 100,
-			label: "Tableau",
-			min: undefined != min ? min : 0,
-			max: undefined != max ? max : 100,
-			minorTicks: 5
-		}
-		
-        
-		var range = config.max - config.min;
-		config.yellowZones = [{ from: config.min + range*0.75, to: config.min + range*0.9 }];
-		config.redZones = [{ from: config.min + range*0.9, to: config.max }];
-		
-		var gauge= Gauge("fillgauge", config);
-		guage.render();
-            	guage.redraw(value, 5000, "%");
-// 		gauge.redraw(value);
-		
-		
-	}}
-
+            }
+            gauge = new Gauge("#fillgauge", config);
+            gauge.render();
+            gauge.redraw(value, 5000, "%");
+        }
+	
+	
     function NewValue() {
         if (Math.random() > .5) {
             return Math.round(Math.random() * 100);
