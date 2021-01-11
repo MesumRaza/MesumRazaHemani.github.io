@@ -121,7 +121,7 @@
                 }
 
             }
-            gauge = new Gauge("#fillgauge", config);
+            gauge = new Gauge("fillgauge", config);
             gauge.render();
             gauge.redraw(value, 5000, "%");
         }
