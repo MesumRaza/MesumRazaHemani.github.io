@@ -108,7 +108,7 @@
 	    
 		var config = 
 		{
-			size: "100%",
+			size: 100,
 			label: "Tableau",
 			min: undefined != min ? min : 0,
 			max: undefined != max ? max : 100,
