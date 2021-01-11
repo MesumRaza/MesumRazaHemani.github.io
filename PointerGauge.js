@@ -74,29 +74,6 @@
 
         return button;
     }
-
-    function loadSummaryData(worksheetName) {
-        // Get the worksheet object we want to get the selected marks for
-        const worksheet = getSelectedSheet(worksheetName);
-
-        // Set our title to an appropriate value
-        $('#user_prompts').remove();
-        $('#show_choose_sheet_button').remove();
-		$('#choose_sheet_dialog').remove();
-
-        // Call to get the summaryData for our sheet
-        worksheet.getSummaryDataAsync().then(function(SummaryData) {
-            // Get the first DataTable for our selected marks (usually there is just one)
-            //const worksheetData = marks.data[0];
-
-            // Populate the data table with the rows and columns we just pulled out
-            //populateDataTable(data, columns);
-            //document.write("I was here..");
-			var value = SummaryData.data[0][0].value //get 1st measure value from connected sheet (POINTER VALUE)
-			populatePointerGauge(value,"Tableau");
-			
-        });
-    }
 	
 	function populatePointerGauge(value, label, min = 0, max = 100) {
             this.value=value;
@@ -120,11 +97,35 @@
                     to: max
                 }
 
-            }
+          }
             gauge = new Gauge("fillgauge", config);
             gauge.render();
             gauge.redraw(value, 5000, "%");
+			
         }
+
+    function loadSummaryData(worksheetName) {
+        // Get the worksheet object we want to get the selected marks for
+        const worksheet = getSelectedSheet(worksheetName);
+
+        // Set our title to an appropriate value
+        $('#user_prompts').remove();
+        $('#show_choose_sheet_button').remove();
+		$('#choose_sheet_dialog').remove();
+
+        // Call to get the summaryData for our sheet
+        worksheet.getSummaryDataAsync().then(function(SummaryData) {
+            // Get the first DataTable for our selected marks (usually there is just one)
+            //const worksheetData = marks.data[0];
+
+            // Populate the data table with the rows and columns we just pulled out
+            //populateDataTable(data, columns);
+            //document.write("I was here..");
+			var value = SummaryData.data[0][0].value //get 1st measure value from connected sheet (POINTER VALUE)
+			populatePointerGauge(value,"Tableau");
+			
+        });
+    }
 	
 	
     function NewValue() {
