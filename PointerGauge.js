@@ -93,7 +93,7 @@
             //populateDataTable(data, columns);
             //document.write("I was here..");
 			var value = SummaryData.data[0][0].value //get 1st measure value from connected sheet (POINTER VALUE)
-			populatePointerGauge(value);
+			populatePointerGauge(value,"Tableau");
 			
         });
     }
