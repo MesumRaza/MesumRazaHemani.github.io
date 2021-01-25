@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit_metrics import metric, metric_row
 
 from plotly.subplots import make_subplots
 from plotly.graph_objs import *
@@ -196,5 +195,3 @@ with st.beta_container():
 	)
 	
 	#col6.plotly_chart(table_fig,use_column_width=True)
-	
-
