@@ -3,3 +3,4 @@ pandas==1.2.0
 streamlit==0.74.1
 matplotlib==3.3.3
 geojson_rewind==1.0.0
+lxml=4.6.2
