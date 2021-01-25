@@ -7,6 +7,7 @@ from matplotlib import cm
 
 import pandas as pd
 import json
+import urllib.request
 
 st.set_page_config(layout="wide")
 
@@ -93,8 +94,9 @@ bar2_fig = go.Figure(data=data)
 
 bar2_fig.update_layout(paper_bgcolor='rgba(0,0,0,0)',plot_bgcolor='rgba(0,0,0,0)',autosize=False,width=300,height=500)
 
-with open(r'PAKISTAN_PROVINCE_FINAL_2020_GEO.json') as f:
-    pakistan_geojson = json.load(f)
+url = "https://raw.githubusercontent.com/MesumRaza/MesumRazaHemani.github.io/main/PAKISTAN_PROVINCE_FINAL_2020_GEO.json"
+response = urllib.request.urlopen(url)
+pakistan_geojson = json.loads(response.read())
 	
 from geojson_rewind import rewind
 
