@@ -177,9 +177,9 @@ with st.beta_container():
 	
 with st.beta_container():
 	col5, col6= st.beta_columns((2,3))
-	
+	map_config={"scrollZoom": False, "displayModeBar": False}
 	col5.header("Cumulative Test Postive By Region")
-	col5.plotly_chart(map_fig, use_column_width=True)
+	col5.plotly_chart(map_fig, use_column_width=True, config=map_config)
 	
 	col6.header("Regional Statistics (Heatmap)")
 	
